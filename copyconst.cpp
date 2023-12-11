@@ -33,4 +33,7 @@ int main(){
     hero deep(30, 'a');
     deep.print();
 
+    hero sam(deep);
+    sam.print();
+
 };
