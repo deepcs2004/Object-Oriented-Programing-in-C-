@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+
 using namespace std;
 
 class hero
@@ -18,21 +19,16 @@ public:
         name = new char[100];
     }
 
-    hero(int health, char level, char name[])
-    {
+    void setName(char name[]){
         char *ch = new char[strlen(name) + 1];
         strcpy(ch, name);
         this->name = ch;
-
-        this->health = health;
-        this->level = level;
     }
 
-    void setName(char name[])
+    hero(int health, char level)
     {
-        char *ch = new char[strlen(name) + 1];
-        strcpy(ch, name);
-        this->name = ch;
+        this->health = health;
+        this->level = level;
     }
 
     void print(void)
@@ -45,11 +41,4 @@ public:
 
 int main()
 {
-
-    char name[7] = "sam";
-    hero h1(20, 'a',name);
-    // char name[7] = "Deep";
-    // h1.setName(name);
-
-    h1.print();
-};
+}
